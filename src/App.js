@@ -15,10 +15,10 @@ const App = () => (
       <Header />
       <div className="app-body">
         <Switch>
-          <Route exact path="/" component={Contact} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Home} />
-          <Route path="/blogs/id" component={BlogItemDetails} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/blogs/:id" component={BlogItemDetails} />
           <Route component={NotFound} />
         </Switch>
       </div>
