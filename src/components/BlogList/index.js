@@ -35,13 +35,13 @@ class BlogList extends Component {
     return (
       <div className="blogs-list-container">
         {isLoading ? (
-          <div data-testid="loder">
+          <div data-testid="loader">
             <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
           </div>
         ) : (
           <ul className="blogs-list">
             {blogsData.map(eachBlogItem => (
-              <BlogItem blogItemDetails={eachBlogItem} />
+              <BlogItem blogItemDetails={eachBlogItem} key={eachBlogItem.id} />
             ))}
           </ul>
         )}
